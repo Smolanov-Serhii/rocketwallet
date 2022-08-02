@@ -1,0 +1,34 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+@font-face {
+    font-family: 'Futura PT';
+    src: local('Futura PT Book'), local('Futura-PT-Book'),
+        url('../../fonts/FuturaPT-Book.woff2') format('woff2'),
+        url('../../fonts/FuturaPT-Book.woff') format('woff'),
+        url('../../fonts/FuturaPT-Book.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura PT';
+    src: local('Futura PT Demi'), local('Futura-PT-Demi'),
+        url('../../fonts/FuturaPT-Demi.woff2') format('woff2'),
+        url('../../fonts/FuturaPT-Demi.woff') format('woff'),
+        url('../../fonts/FuturaPT-Demi.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Futura PT';
+    src: local('Futura PT Medium'), local('Futura-PT-Medium'),
+        url('../../fonts/FuturaPT-Medium.woff2') format('woff2'),
+        url('../../fonts/FuturaPT-Medium.woff') format('woff'),
+        url('../../fonts/FuturaPT-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}  

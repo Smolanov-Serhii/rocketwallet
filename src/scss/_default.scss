@@ -1,0 +1,159 @@
+
+pre{
+  white-space: break-spaces;
+}
+
+h1{
+  font-weight: 600;
+  font-size: 4.8rem;
+  @media all and (max-width: 1200px) {
+    font-size: 4rem;
+  }
+  @media all and (max-width: 1024px) {
+    font-size: 3.2rem;
+  }
+  @media all and (max-width: 768px) {
+    font-size: 20px;
+  }
+  @media all and (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+ul,ol{
+  list-style: disc;
+  margin-bottom: 1.2em;
+  li{
+    margin-bottom: 1.7rem;
+    font-size: 1.6rem;
+    line-height: 120%;
+    list-style: none;
+    padding-left: 2.6rem;
+    position: relative;
+    color: #627289;
+    @media all and (max-width: 1200px) {
+
+    }
+    @media all and (max-width: 1024px) {
+
+    }
+    @media all and (max-width: 768px) {
+
+    }
+    @media all and (max-width: 768px) {
+
+    }
+    &:before{
+      position: absolute;
+      left: 0;
+      top: 0.5rem;
+      content: "";
+      background-color: #66D7EE;
+      width: 10px;
+      height: 10px;
+      display: block;
+      border-radius: 50%;
+      margin-right: 1.6rem;
+    }
+  }
+}
+strong, b{
+  font-weight: 600;
+}
+em{
+  font-style: italic;
+}
+h2{
+  font-weight: 600;
+  font-size: 4.2rem;
+  margin-bottom: 10px;
+  @media all and (max-width: 1200px) {
+    font-size: 3.4rem;
+  }
+  @media all and (max-width: 1024px) {
+    font-size: 2.6rem;
+  }
+  @media all and (max-width: 768px) {
+    font-size: 18px;
+  }
+  @media all and (max-width: 768px) {
+    font-size: 16px
+  }
+}
+h3{
+  font-weight: 600;
+  font-size: 3.6rem;
+  @media all and (max-width: 1200px) {
+    font-size: 3.2rem;
+  }
+  @media all and (max-width: 1024px) {
+    font-size: 2.4rem;
+  }
+  @media all and (max-width: 768px) {
+    font-size: 16px;
+  }
+  @media all and (max-width: 768px) {
+    font-size: 14px
+  }
+}
+h4{
+  font-weight: 600;
+  font-size: 3rem;
+  @media all and (max-width: 1200px) {
+    font-size: 2.6rem;
+  }
+  @media all and (max-width: 1024px) {
+    font-size: 2.2rem;
+  }
+  @media all and (max-width: 768px) {
+    font-size: 14px;
+  }
+  @media all and (max-width: 768px) {
+    font-size: 12px
+  }
+}
+h5{
+  font-weight: 600;
+  font-size: 2.4rem;
+}
+h6{
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+table{
+  th{
+    font-weight: 600;
+  }
+  td{
+    font-weight: 400;
+  }
+  th, td{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.8rem;
+    line-height: 28px;
+    color: #000000;
+    border-top: 1px solid black;
+    padding: 10px;
+    &.actions{
+      text-align: left;
+      .button{
+        padding: 14px 30px;
+      }
+    }
+  }
+  tr{
+    border: 1px solid black;
+    td, th{
+      padding: 4px 10px;
+    }
+    &:nth-child(even){
+
+    }
+  }
+}
+p{
+  font-size: 1.6rem;
+  line-height: 153.9%;
+  color: #132238;
+  margin-bottom: 2rem;
+}

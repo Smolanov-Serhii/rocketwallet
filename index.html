@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RocketWallet | Переводы Телеграмм</title>
+    <link href="dist/css/style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/images/favicon.png" sizes="32x32">
+    <link rel="icon" type="image/svg" href="/images/favicon.svg" sizes="32x32">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="Сайт">
+    <meta name="Keywords" content="HTML, META, метатег, тег, поисковая система">
+    <script src="dist/js/common.js?v=1.3" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<script>
+    window.onload = function () {
+        document.body.classList.add('loaded_hiding');
+        window.setTimeout(function () {
+            document.body.classList.add('loaded');
+            document.body.classList.remove('loaded_hiding');
+        }, 500);
+
+    }
+</script>
+<body>
+    <div class="preloader">
+        <div class="preloader__row">
+            <div class="preloader__item"></div>
+            <div class="preloader__item"></div>
+        </div>
+    </div>
+    <header class="header default">
+        <div class="header__container big-container">
+            <div class="header__logo">
+                <a href="/"><img src="images/header/logo.svg" alt="logo"></a>
+            </div>
+            <div class="header__language">
+                <div class="header__language-current">
+                    <span>RU</span>
+                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="0.949707" width="1" height="7" transform="rotate(-45 0 0.949707)" fill="white"/>
+                        <rect x="4.94977" y="5.89941" width="1" height="7" transform="rotate(-135 4.94977 5.89941)" fill="white"/>
+                    </svg>
+                </div>
+                <div class="header__language-else">
+                    <a href="#">UA</a>
+                    <a href="#">EN</a>
+                </div>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__menu">
+                    <li class="header__item"><a href="#" class="header__lnk">Функционал</a></li>
+                    <li class="header__item"><a href="#" class="header__lnk">Рассчитать комиссию</a></li>
+                    <li class="header__item"><a href="#" class="header__lnk">Как это работает</a></li>
+                    <li class="header__item"><a href="#" class="header__lnk">Помощь</a></li>
+                </ul>
+            </nav>
+            <div class="header__button">
+                <a href="#" class="pink-button button"><span>Вход</span></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <article>
+            <section class="banner" style="background-image: url('../../images/templates/banner/bg.png')">
+                <img class="banner__shape-right" src="images/templates/banner/shape-right.svg">
+                <img class="banner__shape-left" src="images/templates/banner/shape-left.svg">
+                <div class="banner__container big-container">
+                    <div class="banner__image">
+                        <img class="banner__phone" src="images/templates/banner/phone.png"  data-aos-once="true" data-aos="fade-left" data-aos-offset="300" data-aos-duration="500" data-aos-delay="900">
+                        <img class="banner__shadow" src="images/templates/banner/shadow.png"  data-aos-once="true" data-aos="fade-left" data-aos-offset="300" data-aos-duration="500" data-aos-delay="1100">
+                        <img class="banner__subject" src="images/templates/banner/subject.png"  data-aos-once="true" data-aos="fade-right" data-aos-offset="300" data-aos-duration="500" data-aos-delay="1300">
+                    </div>
+                    <div class="banner__content">
+                        <img class="banner__rocket" src="images/templates/banner/rocket.png">
+                        <h1 class="banner__title" data-aos-once="true" data-aos="fade-right" data-aos-offset="300" data-aos-duration="500" data-aos-delay="200">
+                            Цифровой кошелек в Telegram
+                        </h1>
+                        <div class="wrapper" data-aos-once="true" data-aos="fade-right" data-aos-offset="300" data-aos-duration="500" data-aos-delay="500">
+                            <p><strong>Поддерживает 8 валют</strong></p>
+                            <p>фиатные: <span>UAH</span></p>
+                            <p>криптовалюты: <span>BTC,ETH,LTC,USDT,USDC,TRX,BNB</span></p>
+                        </div>
+                    </div>
+                    <div class="banner__button" data-aos-once="true" data-aos="fade-right" data-aos-offset="300" data-aos-duration="500" data-aos-delay="700">
+                        <a href="#" class="button pink-button"><span>Создать кошелек в Telegram</span></a>
+                    </div>
+                </div>
+                <div class="banner__bottom" data-aos-once="true" data-aos="fade-up" data-aos-offset="0" data-aos-duration="500" data-aos-delay="1500">
+                    <div class="banner__bottom-container main-container">
+                        <div class="banner__bottom-content">
+                            <div class="banner__bottom-icon">
+                                <img src="images/templates/banner/visa.svg" alt="Visa">
+                            </div>
+                            <div class="banner__bottom-desc">
+                                <p>Моментальные переводы между пользователями Telegram c 0% комиссией</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="banks">
+                <div class="banks__container big-container">
+                    <div class="banks__items">
+                        <div class="banks__item"><img src="images/templates/banks/privat.png" alt="PrivatBank"></div>
+                        <div class="banks__item"><img src="images/templates/banks/mono.png" alt="mono"></div>
+                        <div class="banks__item"><img src="images/templates/banks/aval.png" alt="aval"></div>
+                        <div class="banks__item"><img src="images/templates/banks/pumb.png" alt="pumb"></div>
+                        <div class="banks__item"><img src="images/templates/banks/oshad.png" alt="oshad"></div>
+                    </div>
+                </div>
+            </div>
+            <section class="pluses">
+                <div class="pluses__container main-container">
+                    <img class="pluses__decoration-1" src="images/templates/pluses/rocket-right.png">
+                    <img class="pluses__decoration-2" src="images/templates/pluses/rocket-left.png">
+                    <img class="pluses__decoration-3" src="images/templates/pluses/rocket-right.png">
+                    <div class="pluses__items">
+                        <div class="pluses__item">
+                            <div class="pluses__text">
+                                <h2 class="pluses__title">
+                                    Гарантированная сохранность
+                                </h2>
+                                <div class="pluses__desc">
+                                    <p>Eget pretium ipsum et habitasse nam est, sit. Tempus, donec blandit ac nunc, et amet. Ac id ultricies lobortis quis duis ipsum eu blandit. Tristique interdum mattis aliquam aliquet malesuada neque. Pellentesque posuere vitae ornare suspendisse in. Sed amet vivamus convallis purus lorem nibh. Montes, erat bibendum mattis turpis vitae, luctus mauris.
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="pluses__img">
+                                <div class="pluses__img-wrapper">
+                                    <img src="images/templates/pluses/1.png" alt="Гарантированная сохранность">
+                                    <img class="addition" src="images/templates/pluses/1-1.png" style="right: 53px; top: 196px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pluses__item">
+                            <div class="pluses__text">
+                                <h2 class="pluses__title">
+                                    Гарантированная сохранность
+                                </h2>
+                                <div class="pluses__desc">
+                                    <p>Eget pretium ipsum et habitasse nam est, sit. Tempus, donec blandit ac nunc, et amet. Ac id ultricies lobortis quis duis ipsum eu blandit. Tristique interdum mattis aliquam aliquet malesuada neque. Pellentesque posuere vitae ornare suspendisse in. Sed amet vivamus convallis purus lorem nibh. Montes, erat bibendum mattis turpis vitae, luctus mauris.
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="pluses__img">
+                                <div class="pluses__img-wrapper">
+                                    <img src="images/templates/pluses/2.png" alt="Гарантированная сохранность">
+                                    <img class="addition" src="images/templates/pluses/2-1.png" style="right: 123px; bottom: 84px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pluses__item">
+                            <div class="pluses__text">
+                                <h2 class="pluses__title">
+                                    Гарантированная сохранность
+                                </h2>
+                                <div class="pluses__desc">
+                                    <p>Eget pretium ipsum et habitasse nam est, sit. Tempus, donec blandit ac nunc, et amet. Ac id ultricies lobortis quis duis ipsum eu blandit. Tristique interdum mattis aliquam aliquet malesuada neque. Pellentesque posuere vitae ornare suspendisse in. Sed amet vivamus convallis purus lorem nibh. Montes, erat bibendum mattis turpis vitae, luctus mauris.
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="pluses__img">
+                                <div class="pluses__img-wrapper">
+                                    <img src="images/templates/pluses/3.png" alt="Гарантированная сохранность">
+                                    <img class="addition" src="images/templates/pluses/3-1.png" style="right: 56px; top: 251px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pluses__item">
+                            <div class="pluses__text">
+                                <h2 class="pluses__title">
+                                    Гарантированная сохранность
+                                </h2>
+                                <div class="pluses__desc">
+                                    <p>Eget pretium ipsum et habitasse nam est, sit. Tempus, donec blandit ac nunc, et amet. Ac id ultricies lobortis quis duis ipsum eu blandit. Tristique interdum mattis aliquam aliquet malesuada neque. Pellentesque posuere vitae ornare suspendisse in. Sed amet vivamus convallis purus lorem nibh. Montes, erat bibendum mattis turpis vitae, luctus mauris.
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="pluses__img">
+                                <div class="pluses__img-wrapper">
+                                    <img src="images/templates/pluses/4.png" alt="Гарантированная сохранность">
+                                    <img class="addition" src="images/templates/pluses/4-1.png" style="right: 58px; bottom: 158px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pluses__item">
+                            <div class="pluses__text">
+                                <h2 class="pluses__title">
+                                    Гарантированная сохранность
+                                </h2>
+                                <div class="pluses__desc">
+                                    <p>Eget pretium ipsum et habitasse nam est, sit. Tempus, donec blandit ac nunc, et amet. Ac id ultricies lobortis quis duis ipsum eu blandit. Tristique interdum mattis aliquam aliquet malesuada neque. Pellentesque posuere vitae ornare suspendisse in. Sed amet vivamus convallis purus lorem nibh. Montes, erat bibendum mattis turpis vitae, luctus mauris.
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="pluses__img">
+                                <div class="pluses__img-wrapper">
+                                    <img src="images/templates/pluses/5.png" alt="Гарантированная сохранность">
+                                    <img class="addition" src="images/templates/pluses/5-1.png" style="right: 117px; bottom: 106px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="secured">
+                <div class="secured__container big-container">
+                    <div class="secured__content">
+                        <img class="secured__left" src="images/templates/secures/bg-left.svg">
+                        <img class="secured__right" src="images/templates/secures/bg-right.svg">
+                        <img class="secured__logo" src="images/templates/secures/logo.svg" alt="CERTIK">
+                        <p class="secured__underlogo">Безопасность кода и сервера сертифицированна агенством Certic</p>
+                        <h2 class="secured__title">
+                            Гарантированная сохранность ваших средств
+                        </h2>
+                        <h3 class="secured__subtitle">
+                            Современные методы шифрования транзакций и полная анонимность ваших операций.
+                        </h3>
+                        <div class="secured__button">
+                            <a href="#" class="button pink-button"><span>Создать кошелек в Telegram</span></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="table" style="background-image: url('images/templates/table/bg.png')">
+                <img class="table__top-full" src="images/templates/table/top-full.svg" alt="">
+                <img class="table__top-op" src="images/templates/table/top-op.svg" alt="">
+                <img class="table__bot-full" src="images/templates/table/bot-full.svg" alt="">
+                <img class="table__bot-op" src="images/templates/table/bot-op.svg" alt="">
+                <div class="table__container main-container">
+                    <div class="table__content">
+                        <img class="rocket-right" src="images/templates/table/rocket-right.png" alt="">
+                        <img class="rocket-left" src="images/templates/table/rocket-left.png" alt="">
+                        <div class="table__part">
+                            <h2 class="table__title">
+                                Комиссии на вывод
+                            </h2>
+                            <div class="table__row">
+                                <div class="table__icon">
+                                    <img src="images/templates/table/1.svg" alt="">
+                                </div>
+                                <div class="table__name">
+                                    USDT ERC20
+                                </div>
+                                <div class="table__price">
+                                    <span class="icon"></span>
+                                    <span class="digit">2.5</span>
+                                    <span class="cript"> usdt</span>
+                                </div>
+                            </div>
+                            <div class="table__row">
+                                <div class="table__icon">
+                                    <img src="images/templates/table/2.svg" alt="">
+                                </div>
+                                <div class="table__name">
+                                    USDT trc20
+                                </div>
+                                <div class="table__price">
+                                    <span class="icon"></span>
+                                    <span class="digit">1</span>
+                                    <span class="cript"> usdt</span>
+                                </div>
+                            </div>
+                            <div class="table__row">
+                                <div class="table__icon">
+                                    <img src="images/templates/table/3.svg" alt="">
+                                </div>
+                                <div class="table__name">
+                                    eth
+                                </div>
+                                <div class="table__price">
+                                    <span class="icon"></span>
+                                    <span class="digit">0.001</span>
+                                    <span class="cript"> eth</span>
+                                </div>
+                            </div>
+                            <div class="table__row">
+                                <div class="table__icon">
+                                    <img src="images/templates/table/4.svg" alt="">
+                                </div>
+                                <div class="table__name">
+                                    uah
+                                </div>
+                                <div class="table__price">
+                                    <span class="icon"></span>
+                                    <span class="digit">10</span>
+                                    <span class="cript"> uah</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table__part">
+                            <h2 class="table__title">
+                                Текущий курс валют
+                            </h2>
+                            <div class="table__row">
+                                <div class="table__icon">
+                                    <img src="images/templates/table/5.svg" alt="">
+                                </div>
+                                <div class="table__name">
+                                    1 USDT
+                                </div>
+                                <div class="table__price">
+                                    <span class="icon"><img src="images/templates/table/4.svg" alt=""></span>
+                                    <span class="digit">40</span>
+                                    <span class="cript"> uah</span>
+                                </div>
+                            </div>
+                            <div class="table__row">
+                                <div class="table__icon">
+                                    <img src="images/templates/table/6.svg" alt="">
+                                </div>
+                                <div class="table__name">
+                                    1 BTC
+                                </div>
+                                <div class="table__price">
+                                    <span class="icon"><img src="images/templates/table/4.svg" alt=""></span>
+                                    <span class="digit">40'000</span>
+                                    <span class="cript"> uah</span>
+                                </div>
+                            </div>
+                            <div class="table__row">
+                                <div class="table__icon">
+                                    <img src="images/templates/table/6.svg" alt="">
+                                </div>
+                                <div class="table__name">
+                                    1 BTC
+                                </div>
+                                <div class="table__price">
+                                    <span class="icon"><img src="images/templates/table/5.svg" alt=""></span>
+                                    <span class="digit">20'000</span>
+                                    <span class="cript"> usdt</span>
+                                </div>
+                            </div>
+                            <div class="table__row">
+                                <div class="table__icon">
+                                    <img src="images/templates/table/3.svg" alt="">
+                                </div>
+                                <div class="table__name">
+                                    1 BTC
+                                </div>
+                                <div class="table__price">
+                                    <span class="icon"><img src="images/templates/table/5.svg" alt=""></span>
+                                    <span class="digit">1'500</span>
+                                    <span class="cript"> usdt</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table__button">
+                        <a href="#" class="button pink-button"><span>Все тарифы</span></a>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
