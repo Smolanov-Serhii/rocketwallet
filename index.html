@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>RocketWallet | Переводы Телеграмм</title>
-    <link href="dist/css/style.css" rel="stylesheet">
+    <link href="dist/css/style.css?v=2" rel="stylesheet">
     <link rel="icon" type="image/png" href="/images/favicon.png" sizes="32x32">
     <link rel="icon" type="image/svg" href="/images/favicon.svg" sizes="32x32">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
@@ -26,7 +26,7 @@
 
     }
 </script>
-<body>
+<body class="main">
     <div class="preloader">
         <div class="preloader__row">
             <div class="preloader__item"></div>
@@ -38,19 +38,6 @@
             <div class="header__logo">
                 <a href="/"><img src="images/header/logo.svg" alt="logo"></a>
             </div>
-            <div class="header__language">
-                <div class="header__language-current">
-                    <span>RU</span>
-                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect y="0.949707" width="1" height="7" transform="rotate(-45 0 0.949707)" fill="white"/>
-                        <rect x="4.94977" y="5.89941" width="1" height="7" transform="rotate(-135 4.94977 5.89941)" fill="white"/>
-                    </svg>
-                </div>
-                <div class="header__language-else">
-                    <a href="#">UA</a>
-                    <a href="#">EN</a>
-                </div>
-            </div>
             <nav class="header__nav">
                 <ul class="header__menu">
                     <li class="header__item"><a href="#" class="header__lnk">Функционал</a></li>
@@ -60,21 +47,36 @@
                 </ul>
             </nav>
             <div class="header__button">
-                <a href="#" class="pink-button button"><span>Вход</span></a>
+                <div class="pink-button button js-login"><span>Вход</span></div>
+            </div>
+            <div class="header__language">
+                <div class="header__wrapper">
+                    <div class="header__language-current">
+                        <span>RU</span>
+                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect y="0.949707" width="1" height="7" transform="rotate(-45 0 0.949707)" fill="white"/>
+                            <rect x="4.94977" y="5.89941" width="1" height="7" transform="rotate(-135 4.94977 5.89941)" fill="white"/>
+                        </svg>
+                    </div>
+                    <div class="header__language-else">
+                        <a href="#">UA</a>
+                        <a href="#">EN</a>
+                    </div>
+                </div>
+            </div>
+            <div class="header__burger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </header>
     <main>
         <article>
-            <section class="banner" style="background-image: url('../../images/templates/banner/bg.png')">
+            <section class="banner">
                 <img class="banner__shape-right" src="images/templates/banner/shape-right.svg">
                 <img class="banner__shape-left" src="images/templates/banner/shape-left.svg">
                 <div class="banner__container big-container">
-                    <div class="banner__image">
-                        <img class="banner__phone" src="images/templates/banner/phone.png"  data-aos-once="true" data-aos="fade-left" data-aos-offset="300" data-aos-duration="500" data-aos-delay="900">
-                        <img class="banner__shadow" src="images/templates/banner/shadow.png"  data-aos-once="true" data-aos="fade-left" data-aos-offset="300" data-aos-duration="500" data-aos-delay="1100">
-                        <img class="banner__subject" src="images/templates/banner/subject.png"  data-aos-once="true" data-aos="fade-right" data-aos-offset="300" data-aos-duration="500" data-aos-delay="1300">
-                    </div>
                     <div class="banner__content">
                         <img class="banner__rocket" src="images/templates/banner/rocket.png">
                         <h1 class="banner__title" data-aos-once="true" data-aos="fade-right" data-aos-offset="300" data-aos-duration="500" data-aos-delay="200">
@@ -86,6 +88,11 @@
                             <p>криптовалюты: <span>BTC,ETH,LTC,USDT,USDC,TRX,BNB</span></p>
                         </div>
                     </div>
+                    <div class="banner__image">
+                        <img class="banner__phone" src="images/templates/banner/phone.png"  data-aos-once="true" data-aos="fade-left" data-aos-offset="300" data-aos-duration="500" data-aos-delay="900">
+                        <img class="banner__shadow" src="images/templates/banner/shadow.png"  data-aos-once="true" data-aos="fade-left" data-aos-offset="300" data-aos-duration="500" data-aos-delay="1100">
+                        <img class="banner__subject" src="images/templates/banner/subject.png"  data-aos-once="true" data-aos="fade-right" data-aos-offset="300" data-aos-duration="500" data-aos-delay="1300">
+                    </div>
                     <div class="banner__button" data-aos-once="true" data-aos="fade-right" data-aos-offset="300" data-aos-duration="500" data-aos-delay="700">
                         <a href="#" class="button pink-button"><span>Создать кошелек в Telegram</span></a>
                     </div>
@@ -94,7 +101,10 @@
                     <div class="banner__bottom-container main-container">
                         <div class="banner__bottom-content">
                             <div class="banner__bottom-icon">
-                                <img src="images/templates/banner/visa.svg" alt="Visa">
+                                <picture>
+                                    <source srcset="images/templates/banner/visa.svg" media="(min-width: 500px)">
+                                    <img src="images/templates/banner/visa-mob.svg" alt="Visa">
+                                </picture>
                             </div>
                             <div class="banner__bottom-desc">
                                 <p>Моментальные переводы между пользователями Telegram c 0% комиссией</p>
@@ -103,7 +113,7 @@
                     </div>
                 </div>
             </section>
-            <div class="banks">
+            <div class="banks" data-aos-once="true" data-aos="fade-up" data-aos-offset="300" data-aos-duration="500" data-aos-delay="200">
                 <div class="banks__container big-container">
                     <div class="banks__items">
                         <div class="banks__item"><img src="images/templates/banks/privat.png" alt="PrivatBank"></div>
@@ -122,16 +132,18 @@
                     <div class="pluses__items">
                         <div class="pluses__item">
                             <div class="pluses__text">
-                                <h2 class="pluses__title">
-                                    Гарантированная сохранность
+                                <h2 class="pluses__title section-title" data-aos-once="true" data-aos="fade-right" data-aos-offset="100" data-aos-duration="500" data-aos-delay="200">
+                                    Кошелек в Телеграм
                                 </h2>
-                                <div class="pluses__desc">
-                                    <p>Eget pretium ipsum et habitasse nam est, sit. Tempus, donec blandit ac nunc, et amet. Ac id ultricies lobortis quis duis ipsum eu blandit. Tristique interdum mattis aliquam aliquet malesuada neque. Pellentesque posuere vitae ornare suspendisse in. Sed amet vivamus convallis purus lorem nibh. Montes, erat bibendum mattis turpis vitae, luctus mauris.
+                                <div class="pluses__desc" data-aos-once="true" data-aos="fade-right" data-aos-offset="100" data-aos-duration="500" data-aos-delay="500">
+                                    <p>Кошелек привязан к вашему аккаунту в телеграм
+                                        Понятный и простой интерфейс
+                                        Быстрые операци и анонимность
                                     </p>
                                 </div>
 
                             </div>
-                            <div class="pluses__img">
+                            <div class="pluses__img" data-aos-once="true" data-aos="fade-left" data-aos-offset="300" data-aos-duration="500" data-aos-delay="800">
                                 <div class="pluses__img-wrapper">
                                     <img src="images/templates/pluses/1.png" alt="Гарантированная сохранность">
                                     <img class="addition" src="images/templates/pluses/1-1.png" style="right: 53px; top: 196px;">
@@ -140,16 +152,16 @@
                         </div>
                         <div class="pluses__item">
                             <div class="pluses__text">
-                                <h2 class="pluses__title">
-                                    Гарантированная сохранность
+                                <h2 class="pluses__title section-title" data-aos-once="true" data-aos="fade-left" data-aos-offset="100" data-aos-duration="500" data-aos-delay="200">
+                                    Лучший курс обмена
                                 </h2>
-                                <div class="pluses__desc">
-                                    <p>Eget pretium ipsum et habitasse nam est, sit. Tempus, donec blandit ac nunc, et amet. Ac id ultricies lobortis quis duis ipsum eu blandit. Tristique interdum mattis aliquam aliquet malesuada neque. Pellentesque posuere vitae ornare suspendisse in. Sed amet vivamus convallis purus lorem nibh. Montes, erat bibendum mattis turpis vitae, luctus mauris.
+                                <div class="pluses__desc" data-aos-once="true" data-aos="fade-left" data-aos-offset="100" data-aos-duration="500" data-aos-delay="500">
+                                    <p>Моментальный обмен криптовалют по лучшему курсу, с минимальной и понятной комиссией
                                     </p>
                                 </div>
 
                             </div>
-                            <div class="pluses__img">
+                            <div class="pluses__img" data-aos-once="true" data-aos="fade-right" data-aos-offset="300" data-aos-duration="500" data-aos-delay="800">
                                 <div class="pluses__img-wrapper">
                                     <img src="images/templates/pluses/2.png" alt="Гарантированная сохранность">
                                     <img class="addition" src="images/templates/pluses/2-1.png" style="right: 123px; bottom: 84px;">
@@ -158,16 +170,16 @@
                         </div>
                         <div class="pluses__item">
                             <div class="pluses__text">
-                                <h2 class="pluses__title">
-                                    Гарантированная сохранность
+                                <h2 class="pluses__title section-title" data-aos-once="true" data-aos="fade-right" data-aos-offset="100" data-aos-duration="500" data-aos-delay="200">
+                                    Вывод и пополнение без комиссии
                                 </h2>
-                                <div class="pluses__desc">
-                                    <p>Eget pretium ipsum et habitasse nam est, sit. Tempus, donec blandit ac nunc, et amet. Ac id ultricies lobortis quis duis ipsum eu blandit. Tristique interdum mattis aliquam aliquet malesuada neque. Pellentesque posuere vitae ornare suspendisse in. Sed amet vivamus convallis purus lorem nibh. Montes, erat bibendum mattis turpis vitae, luctus mauris.
+                                <div class="pluses__desc" data-aos="fade-right" data-aos-offset="100" data-aos-duration="500" data-aos-delay="500">
+                                    <p>Мгновенное пополнение и простой вывод средств на карты Visa/MasterCard несколько кликов - Без комиссии
                                     </p>
                                 </div>
 
                             </div>
-                            <div class="pluses__img">
+                            <div class="pluses__img"  data-aos-once="true" data-aos="fade-left" data-aos-offset="300" data-aos-duration="500" data-aos-delay="800">
                                 <div class="pluses__img-wrapper">
                                     <img src="images/templates/pluses/3.png" alt="Гарантированная сохранность">
                                     <img class="addition" src="images/templates/pluses/3-1.png" style="right: 56px; top: 251px;">
@@ -176,16 +188,17 @@
                         </div>
                         <div class="pluses__item">
                             <div class="pluses__text">
-                                <h2 class="pluses__title">
-                                    Гарантированная сохранность
+                                <h2 class="pluses__title section-title" data-aos-once="true" data-aos="fade-left" data-aos-offset="100" data-aos-duration="500" data-aos-delay="200">
+                                    Безопасность операций
                                 </h2>
-                                <div class="pluses__desc">
-                                    <p>Eget pretium ipsum et habitasse nam est, sit. Tempus, donec blandit ac nunc, et amet. Ac id ultricies lobortis quis duis ipsum eu blandit. Tristique interdum mattis aliquam aliquet malesuada neque. Pellentesque posuere vitae ornare suspendisse in. Sed amet vivamus convallis purus lorem nibh. Montes, erat bibendum mattis turpis vitae, luctus mauris.
+                                <div class="pluses__desc" data-aos-once="true" data-aos="fade-left" data-aos-offset="100" data-aos-duration="500" data-aos-delay="500">
+                                    <p>Сохранность средств обеспечена современными средствами защиты и актуальными методами шифрования.
+                                        Настраиваемая авторизация доступа и уведомлений о транзакциях - включая Двухфакторную аутентификацию
                                     </p>
                                 </div>
 
                             </div>
-                            <div class="pluses__img">
+                            <div class="pluses__img" data-aos-once="true" data-aos="fade-right" data-aos-offset="300" data-aos-duration="500" data-aos-delay="800">
                                 <div class="pluses__img-wrapper">
                                     <img src="images/templates/pluses/4.png" alt="Гарантированная сохранность">
                                     <img class="addition" src="images/templates/pluses/4-1.png" style="right: 58px; bottom: 158px;">
@@ -194,16 +207,17 @@
                         </div>
                         <div class="pluses__item">
                             <div class="pluses__text">
-                                <h2 class="pluses__title">
-                                    Гарантированная сохранность
+                                <h2 class="pluses__title section-title" data-aos-once="true" data-aos="fade-right" data-aos-offset="100" data-aos-duration="500" data-aos-delay="200">
+                                    Современная поддержка
                                 </h2>
-                                <div class="pluses__desc">
-                                    <p>Eget pretium ipsum et habitasse nam est, sit. Tempus, donec blandit ac nunc, et amet. Ac id ultricies lobortis quis duis ipsum eu blandit. Tristique interdum mattis aliquam aliquet malesuada neque. Pellentesque posuere vitae ornare suspendisse in. Sed amet vivamus convallis purus lorem nibh. Montes, erat bibendum mattis turpis vitae, luctus mauris.
+                                <div class="pluses__desc" data-aos-once="true" data-aos="fade-right" data-aos-offset="100" data-aos-duration="500" data-aos-delay="500">
+                                    <p>Быстрая и отзывчивая служба технической поддержки.
+                                        Среднее время ответа в рабочее время составляет 7 минут!
                                     </p>
                                 </div>
 
                             </div>
-                            <div class="pluses__img">
+                            <div class="pluses__img" data-aos-once="true" data-aos="fade-left" data-aos-offset="300" data-aos-duration="500" data-aos-delay="800">
                                 <div class="pluses__img-wrapper">
                                     <img src="images/templates/pluses/5.png" alt="Гарантированная сохранность">
                                     <img class="addition" src="images/templates/pluses/5-1.png" style="right: 117px; bottom: 106px;">
@@ -216,23 +230,31 @@
             <section class="secured">
                 <div class="secured__container big-container">
                     <div class="secured__content">
-                        <img class="secured__left" src="images/templates/secures/bg-left.svg">
-                        <img class="secured__right" src="images/templates/secures/bg-right.svg">
-                        <img class="secured__logo" src="images/templates/secures/logo.svg" alt="CERTIK">
-                        <p class="secured__underlogo">Безопасность кода и сервера сертифицированна агенством Certic</p>
-                        <h2 class="secured__title">
+                        <picture>
+                            <source srcset="images/templates/secures/bg-left.svg" media="(min-width: 500px)">
+                            <img class="secured__left" src="images/templates/secures/bg-left-mob.svg" alt="Visa">
+                        </picture>
+                        <picture>
+                            <source srcset="images/templates/secures/bg-right.svg" media="(min-width: 500px)">
+                            <img class="secured__right" src="images/templates/secures/bg-right-mob.svg" alt="Visa">
+                        </picture>
+                        <img class="secured__logo" src="images/templates/secures/logo.svg" alt="CERTIK" data-aos-once="true" data-aos="fade-up" data-aos-offset="200" data-aos-duration="500" data-aos-delay="100">
+                        <p class="secured__underlogo" data-aos-once="true" data-aos="fade-up" data-aos-offset="200" data-aos-duration="500" data-aos-delay="100">Безопасность кода и сервера сертифицированна агенством Certic</p>
+                        <h2 class="secured__title section-title" data-aos-once="true" data-aos="fade-up" data-aos-offset="200" data-aos-duration="500" data-aos-delay="300">
                             Гарантированная сохранность ваших средств
                         </h2>
-                        <h3 class="secured__subtitle">
-                            Современные методы шифрования транзакций и полная анонимность ваших операций.
+                        <h3 class="secured__subtitle" data-aos-once="true" data-aos="fade-up" data-aos-offset="200" data-aos-duration="500" data-aos-delay="500">
+                            Сохранность средств обеспечена современными средствами защиты.
+                            Все транзакции защищены актуальными методами шифрования, что гарантирует полную анонимность операций.
+                            Сервера и алгоритмы сертифицированы агенством ****
                         </h3>
-                        <div class="secured__button">
+                        <div class="secured__button" data-aos-once="true" data-aos="fade-up" data-aos-offset="200" data-aos-duration="500" data-aos-delay="700">>
                             <a href="#" class="button pink-button"><span>Создать кошелек в Telegram</span></a>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="table" style="background-image: url('images/templates/table/bg.png')">
+            <section class="table">
                 <img class="table__top-full" src="images/templates/table/top-full.svg" alt="">
                 <img class="table__top-op" src="images/templates/table/top-op.svg" alt="">
                 <img class="table__bot-full" src="images/templates/table/bot-full.svg" alt="">
@@ -242,10 +264,10 @@
                         <img class="rocket-right" src="images/templates/table/rocket-right.png" alt="">
                         <img class="rocket-left" src="images/templates/table/rocket-left.png" alt="">
                         <div class="table__part">
-                            <h2 class="table__title">
+                            <h2 class="table__title section-title" data-aos-once="true" data-aos="fade-right" data-aos-offset="200" data-aos-duration="500" data-aos-delay="100">
                                 Комиссии на вывод
                             </h2>
-                            <div class="table__row">
+                            <div class="table__row" data-aos-once="true" data-aos="fade-right" data-aos-offset="200" data-aos-duration="500" data-aos-delay="200">
                                 <div class="table__icon">
                                     <img src="images/templates/table/1.svg" alt="">
                                 </div>
@@ -258,7 +280,7 @@
                                     <span class="cript"> usdt</span>
                                 </div>
                             </div>
-                            <div class="table__row">
+                            <div class="table__row" data-aos-once="true" data-aos="fade-right" data-aos-offset="200" data-aos-duration="500" data-aos-delay="300">
                                 <div class="table__icon">
                                     <img src="images/templates/table/2.svg" alt="">
                                 </div>
@@ -271,7 +293,7 @@
                                     <span class="cript"> usdt</span>
                                 </div>
                             </div>
-                            <div class="table__row">
+                            <div class="table__row" data-aos-once="true" data-aos="fade-right" data-aos-offset="200" data-aos-duration="500" data-aos-delay="400">
                                 <div class="table__icon">
                                     <img src="images/templates/table/3.svg" alt="">
                                 </div>
@@ -284,7 +306,7 @@
                                     <span class="cript"> eth</span>
                                 </div>
                             </div>
-                            <div class="table__row">
+                            <div class="table__row" data-aos-once="true" data-aos="fade-right" data-aos-offset="200" data-aos-duration="500" data-aos-delay="500">
                                 <div class="table__icon">
                                     <img src="images/templates/table/4.svg" alt="">
                                 </div>
@@ -299,10 +321,10 @@
                             </div>
                         </div>
                         <div class="table__part">
-                            <h2 class="table__title">
+                            <h2 class="table__title section-title" data-aos-once="true" data-aos="fade-left" data-aos-offset="200" data-aos-duration="500" data-aos-delay="100">
                                 Текущий курс валют
                             </h2>
-                            <div class="table__row">
+                            <div class="table__row" data-aos-once="true" data-aos="fade-left" data-aos-offset="200" data-aos-duration="500" data-aos-delay="200">
                                 <div class="table__icon">
                                     <img src="images/templates/table/5.svg" alt="">
                                 </div>
@@ -315,7 +337,7 @@
                                     <span class="cript"> uah</span>
                                 </div>
                             </div>
-                            <div class="table__row">
+                            <div class="table__row" data-aos-once="true" data-aos="fade-left" data-aos-offset="200" data-aos-duration="500" data-aos-delay="300">
                                 <div class="table__icon">
                                     <img src="images/templates/table/6.svg" alt="">
                                 </div>
@@ -328,7 +350,7 @@
                                     <span class="cript"> uah</span>
                                 </div>
                             </div>
-                            <div class="table__row">
+                            <div class="table__row" data-aos-once="true" data-aos="fade-left" data-aos-offset="200" data-aos-duration="500" data-aos-delay="400">
                                 <div class="table__icon">
                                     <img src="images/templates/table/6.svg" alt="">
                                 </div>
@@ -341,7 +363,7 @@
                                     <span class="cript"> usdt</span>
                                 </div>
                             </div>
-                            <div class="table__row">
+                            <div class="table__row" data-aos-once="true" data-aos="fade-left" data-aos-offset="200" data-aos-duration="500" data-aos-delay="500">
                                 <div class="table__icon">
                                     <img src="images/templates/table/3.svg" alt="">
                                 </div>
@@ -356,15 +378,105 @@
                             </div>
                         </div>
                     </div>
-                    <div class="table__button">
-                        <a href="#" class="button pink-button"><span>Все тарифы</span></a>
+                    <div class="table__button"  data-aos-once="true" data-aos="fade-up" data-aos-offset="200" data-aos-duration="500" data-aos-delay="700">>
+                        <a href="rate.html" class="button pink-button"><span>Все тарифы</span></a>
+                    </div>
+                </div>
+            </section>
+            <section class="map">
+                <h2 class="map__title section-title main-container" data-aos-once="true" data-aos="fade-up" data-aos-offset="200" data-aos-duration="500" data-aos-delay="200">
+                    Возможности цифрового кошелька <br>Rocket Wallet уже используют
+                </h2>
+                <div class="map__container main-container">
+                    <img class="rocket" src="images/templates/map/rocket.png" alt="rocket">
+                    <div class="map__image">
+                        <img src="images/templates/map/map.svg" alt="map">
+                    </div>
+                    <div class="map__content" data-aos-once="true" data-aos="fade-up" data-aos-offset="200" data-aos-duration="500" data-aos-delay="500">
+                        <div class="map__digit digit" data-num="1310472">
+                            1.310.472
+                        </div>
+                        <p class="map__underdigit" data-aos-once="true" data-aos="fade-up" data-aos-offset="200" data-aos-duration="500" data-aos-delay="700">Активных пользователей</p>
+                        <div class="map__button" data-aos-once="true" data-aos="fade-up" data-aos-offset="200" data-aos-duration="500" data-aos-delay="900">
+                            <a class="button pink-button" href="#"><span>Создать кошелек</span></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="start">
+                <div class="start__container big-container">
+                    <div class="start__content" style="background-image: url('images/templates/start/bg.png')">
+                        <img class="rocket" src="images/templates/start/rocket.png" alt="rocket">
+                        <div class="start__text">
+                            <h2 class="start__title section-title" data-aos-once="true" data-aos="fade-right" data-aos-offset="200" data-aos-duration="500" data-aos-delay="200">
+                                Отправьте свой первый перевод!
+                            </h2>
+                            <p class="start__subtitle" data-aos-once="true" data-aos="fade-right" data-aos-offset="200" data-aos-duration="500" data-aos-delay="500">Вам понадобиться сделать несколько кликов и всего пара минут.</p>
+                        </div>
+                        <div class="start__button" data-aos-once="true" data-aos="fade-left" data-aos-offset="200" data-aos-duration="500" data-aos-delay="800">
+                            <div class="button pink-button js-login"><span>Вход</span></div>
+                        </div>
                     </div>
                 </div>
             </section>
         </article>
     </main>
-    <footer>
-
+    <footer class="footer">
+        <div class="footer__container big-container">
+            <div class="footer__content">
+                <div class="footer__main">
+                    <div class="footer__logo">
+                        <a href="/"><img src="images/footer/logo.svg" alt="logo"></a>
+                    </div>
+                    <nav class="footer__nav">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="rate.html" class="footer__lnk">Тарифы</a></li>
+                            <li class="footer__item"><a href="agreement.html" class="footer__lnk">Пользовательское соглашение</a></li>
+                        </ul>
+                    </nav>
+                    <div class="footer__help">
+                        <a href="#" class="button grey-button">
+                            <img src="images/footer/help.svg" alt="help">
+                            <span>Служба поддержки</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__copyright">
+                    © Rocket Wallet. All Rights Reserved
+                </div>
+            </div>
+        </div>
     </footer>
+    <div class="login" style="display: none">
+        <div class="login__container">
+            <div class="login__close">
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="1.41431" width="2" height="15" transform="rotate(-45 0 1.41431)" fill="#BFC4D9"/>
+                    <rect x="1.41431" y="12.0208" width="2" height="15" transform="rotate(-135 1.41431 12.0208)" fill="#BFC4D9"/>
+                </svg>
+
+            </div>
+            <div class="login__title">
+                Вход
+            </div>
+            <a href="#" class="login__telegram">
+                <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25.179 2.39255L21.4822 19.8269C21.203 21.0572 20.4759 21.3634 19.4425 20.7842L13.8093 16.6332L11.0915 19.2477C10.7905 19.5487 10.5394 19.7998 9.9593 19.7998L10.3644 14.0633L20.804 4.62992C21.2582 4.22567 20.7052 4.0008 20.0988 4.40592L7.19255 12.5329L1.6363 10.7934C0.427923 10.4163 0.406048 9.58505 1.8883 9.00492L23.6207 0.632047C24.6269 0.254922 25.5072 0.856047 25.179 2.39342V2.39255Z" fill="white"/>
+                </svg>
+                <span>Через телеграм</span>
+            </a>
+            <div class="devider">
+                or
+            </div>
+            <div class="login__buttons">
+                <a href="#">
+                    <img src="images/icons/google.svg" alt="google">
+                </a>
+                <a href="#">
+                    <img src="images/icons/mail.svg" alt="mail">
+                </a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

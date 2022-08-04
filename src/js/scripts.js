@@ -1,5 +1,35 @@
 $( document ).ready(function() {
-
+    var time = 1,
+        cc = 1;
+    $(window).scroll(function() {
+        $('#counter').each(function() {
+            var
+                cPos = $(this).offset().top,
+                topWindow = $(window).scrollTop();
+            viewportHeight = $(window).height();
+            if ((topWindow + viewportHeight) - cPos > viewportHeight / 6) {
+                if (cc < 2) {
+                    $(".number").addClass("viz");
+                    $('div.digit').each(function() {
+                        var
+                            i = 1,
+                            num = $(this).data('num'),
+                            step = time / num,
+                            that = $(this),
+                            int = setInterval(function() {
+                                if (i <= num) {
+                                    that.html(i + "");
+                                } else {
+                                    cc = cc + 2;
+                                    clearInterval(int);
+                                }
+                                i++;
+                            }, step);
+                    });
+                }
+            }
+        });
+    });
     var $menu = $(".header");
     $(window).scroll(function(){
         if ( $(this).scrollTop() > 100 && $menu.hasClass("default") ){
@@ -60,6 +90,29 @@ $( document ).ready(function() {
     if($('.header__language').length){
         $(".header__language-current").click(function() {
             $('.header__language-else').fadeToggle(300);
+        });
+    }
+
+    $(function() {
+        $('select.selectric').selectric();
+    });
+
+    if($('.login').length){
+        $(".js-login").click(function() {
+            $('.login').fadeToggle(300);
+            $('body').toggleClass('locked');
+        });
+        $(".login__close").click(function() {
+            $('.login').fadeToggle(300);
+            $('body').toggleClass('locked');
+        });
+        $(document).mouseup(function (e){ // событие клика по веб-документу
+            var div = $(".login__container"); // тут указываем ID элемента
+            if (!div.is(e.target) // если клик был не по нашему блоку
+                && div.has(e.target).length === 0) { // и не по его дочерним элементам
+                $('.login').fadeOut(300);
+                $('body').removeClass('locked');
+            }
         });
     }
 });

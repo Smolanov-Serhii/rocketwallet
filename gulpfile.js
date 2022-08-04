@@ -31,7 +31,7 @@ const scriptFiles = [
    './src/js/aos.js',
    // './src/js/slick.js',
    // './src/js/feedback.js',
-   // './src/client/js/jquery.selectric.js',
+   './src/js/jquery.selectric.js',
    './src/js/swiper-bundle.js',
    // './src/client/js/jquery.mCustomScrollbar.js',
    // './src/client/js/fresco.min.js',
