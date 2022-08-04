@@ -17,6 +17,9 @@ const sourcemaps = require('gulp-sourcemaps');
 //Sass препроцессор
 const sass = require('gulp-sass')(require('sass'));
 
+const webp = require('gulp-webp');
+
+
 
 //Порядок подключения файлов со стилями
 const styleFiles = [
@@ -38,7 +41,12 @@ const scriptFiles = [
    './src/js/scripts.js'
 
 ]
+gulp.task('webp', function () {
+   return gulp.src('images/templates/**/*.png')
+       .pipe(webp())
+       .pipe(gulp.dest('images/webp'))
 
+});
 //Таск для обработки стилей
 gulp.task('sass', () => {
    //Шаблон для поиска файлов CSS
