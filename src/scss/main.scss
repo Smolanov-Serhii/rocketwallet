@@ -460,7 +460,10 @@ main{
       bottom: 100px;
     }
     .banner__phone{
-      height: 100%;
+      @media all and (min-width: 500px){
+        height: 100%;
+      }
+      width: auto;
     }
     @media all and (max-width: 1024px){
       position: relative;
@@ -724,37 +727,60 @@ main{
   }
   &__items{
     .pluses__item{
+      .pluses__chat-item{
+        overflow: hidden;
+        img, .subject{
+          transform: translateY(200px);
+        }
+      }
       &.show{
         .pluses__chat-item{
-          opacity: 0;
-          transition-duration: 0.5s;
           &:first-child{
-            transition-delay: 1s;
-            opacity: 1;
+            img, .subject{
+              transform: translateY(0);
+              transition: 0.2s;
+              transition-delay: 2s;
+            }
           }
           &:nth-child(2){
-            transition-delay: 2s;
-            opacity: 1;
+            img, .subject{
+              transition: 0.2s;
+              transform: translateY(0);
+              transition-delay: 3s;
+            }
           }
           &:nth-child(3){
-            transition-delay: 3s;
-            opacity: 1;
+            img, .subject{
+              transition: 0.2s;
+              transform: translateY(0);
+              transition-delay: 4.5s;
+            }
           }
           &:nth-child(4){
-            transition-delay: 4s;
-            opacity: 1;
+            img, .subject{
+              transition: 0.2s;
+              transform: translateY(0);
+              transition-delay: 6s;
+            }
           }
           &:nth-child(5){
-            transition-delay: 5s;
-            opacity: 1;
+            img, .subject{
+              transition: 0.2s;
+              transform: translateY(0);
+              transition-delay: 7s;
+            }
           }
           &:nth-child(6){
-            transition-delay: 6s;
-            opacity: 1;
+            img, .subject{
+              transition: 0.2s;
+              transform: translateY(0);
+              transition-delay: 8s;
+            }
           }
           &:nth-child(7){
-            transition-delay: 7s;
-            opacity: 1;
+            transition: 0.2s;
+            transform: translateY(0);
+            transition-delay: 9s;
           }
         }
       }
@@ -821,7 +847,6 @@ main{
         flex-direction: column;
         &-item{
           margin-bottom: 10px;
-          opacity: 0;
           @media all and (max-width: 500px){
             margin-bottom: 4px;
           }
@@ -1110,10 +1135,10 @@ main{
       position: absolute;
       content: "";
       display: block;
-      background: linear-gradient(88.49deg,rgba(109,0,175,.47) 1.05%,rgba(239,0,105,.47) 100.17%);
+      box-shadow: 0px 20px 30px #992787;
       filter: blur(20px);
       border-radius: 25px;
-      bottom: -20px;
+      bottom: 0;
       width: calc(100% - 296px);
       height: calc(100% - 40px);
       z-index: -1;
@@ -1536,14 +1561,18 @@ main{
       position: absolute;
       content: "";
       display: block;
-      background: linear-gradient(88.49deg, rgba(109, 0, 175, 0.47) 1.05%, rgba(239, 0, 105, 0.47) 100.17%);
+      box-shadow: 0px 20px 30px #992787;
       filter: blur(20px);
       border-radius: 25px;
-      bottom: -20px;
+      bottom: 0;
       width: calc(100% - 296px);
       height: calc(100% - 40px);
       z-index: -1;
       margin-left: 48px;
+      @media all and (max-width: 500px){
+        width: calc(100% - 80px);
+        margin-left: 20px;
+      }
     }
   }
   &__content{

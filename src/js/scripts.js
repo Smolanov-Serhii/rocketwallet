@@ -259,7 +259,9 @@ $(document).ready(function () {
     for (let anchor of anchors) {
         anchor.addEventListener('click', function (e) {
             e.preventDefault()
-
+            $('body').removeClass('locked')
+            $('.header__burger').removeClass('active')
+            $('.header__mobile').fadeOut(300)
             const blockID = anchor.getAttribute('href').substr(1)
 
             document.getElementById(blockID).scrollIntoView({
