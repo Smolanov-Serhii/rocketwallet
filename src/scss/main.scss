@@ -567,6 +567,7 @@ main{
     left: 0;
     width: 100%;
     z-index: 2;
+    pointer-events: none;
     @media all and (max-width: 1440px){
       position: relative;
     }
@@ -666,7 +667,6 @@ main{
 }
 .banks{
   margin-top: 34px;
-  margin-bottom: 114px;
   &__container{
 
   }
@@ -700,6 +700,7 @@ main{
   }
 }
 .pluses{
+  padding-top: 114px;
   &__container{
     position: relative;
   }
@@ -1368,6 +1369,11 @@ main{
     text-transform: uppercase;
   }
   &__price{
+    @media all and (min-width: 768px){
+      min-width: 194px;
+      display: flex;
+      align-items: center;
+    }
     .icon{
       margin-right: 14px;
       width: 35px;
@@ -1382,6 +1388,9 @@ main{
       line-height: 19px;
       text-transform: uppercase;
       color: #FFFFFF;
+      flex: 1;
+      text-align: right;
+      margin-right: 10px;
     }
     .cript{
       font-weight: 700;
@@ -1761,6 +1770,8 @@ main{
     }
     &-head{
       margin-bottom: 15px;
+
+      color: #000b44;
       img{
         margin-right: 14px;
       }
@@ -1866,9 +1877,18 @@ main{
           padding-left: 10px;
           padding-right: 10px;
           width: 70%;
+          color: #000b44;
+        }
+        span{
+          min-width: 46px;
+          display: inline-block;
+          text-align: left;
         }
         strong{
           margin-left: 10px;
+          @media all and(max-width: 500px){
+            margin-left: 0;
+          }
         }
         @media all and(max-width: 500px){
           strong{
@@ -1884,6 +1904,7 @@ main{
           padding-right: 10px;
           padding-left: 10px;
           width: 30%;
+          color: #000b44;
         }
       }
     }

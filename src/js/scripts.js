@@ -1,7 +1,5 @@
 if ($('section.tarif').length && $('section.rates').length) {
 
-
-
     var filters = [];
     $.getJSON('../../data.json', function (data) {
         $(window).resize(function() {
@@ -101,7 +99,7 @@ if ($('section.tarif').length && $('section.rates').length) {
                     var point = valueI.toString().replace('1e-', '');
                     $('section.rates').find('.rates__table tbody').append('<tr data-currency="' + keyI + '">' +
                         '<td><img src="images/icons/' + key.toLowerCase() + '.svg">' + key.toUpperCase() + '</td>' +
-                        '<td><strong>' + keyI + '</strong><strong>' + Number(valueI).toFixed(point) + '</strong></td>' +
+                        '<td><strong style="font-weight: 500;"><span>' + keyI + '</span></strong><strong style="color: #000B44">' + Number(valueI).toFixed(point) + '</strong></td>' +
                         '</tr>')
                     if (filters.indexOf(keyI) < 0) {
                         filters.push(keyI);
@@ -256,7 +254,7 @@ $(document).ready(function () {
         // });
     }
 
-    const anchors = document.querySelectorAll('a[href*="#"]')
+    const anchors = document.querySelectorAll('a.scroll[href*="#"]')
 
     for (let anchor of anchors) {
         anchor.addEventListener('click', function (e) {
