@@ -401,6 +401,9 @@ main{
   background-position: center;
   position: relative;
   background-image: url(../../images/templates/banner/bg.jpg);
+  @media all and (min-width: 3000px) and (min-height: 800px){
+    overflow: hidden;
+  }
   @media all and (max-width: 1440px){
     height: auto;
     padding-top: 140px;
@@ -421,6 +424,9 @@ main{
     color: #FFFFFF;
     margin-bottom: 26px;
     text-align: left;
+    @media all and (min-width: 1400px) and (max-height: 800px){
+      font-size: 50px;
+    }
     @media all and (max-width: 1440px){
       font-size: 56px;
     }
@@ -455,7 +461,13 @@ main{
     right: 100vw * $px;
     bottom: 25vh;
     height: 724vw * $px;
+    max-height: 50vh;
     z-index: 2;
+    @media all and (max-width: 4000px) and (max-height: 800px){
+      max-height: 60%;
+      bottom: 32%;
+      height: 600vw * $px;
+    }
     @media all and (max-width: 1440px){
       bottom: 100px;
     }
@@ -487,9 +499,9 @@ main{
   }
   &__subject{
     position: absolute;
-    top: 80vw * $px;
-    right: 60vw * $px;
-    width: 561vw * $px;
+    top: 11%;
+    right: 10%;
+    width: 29.21875vw;
     @media all and (max-width: 1024px){
       width: 120%;
       top: 11%;
@@ -503,6 +515,13 @@ main{
       left: 0;
       width: 100%;
       z-index: 1;
+      @media all and (max-width: 3000px){
+        bottom: 0;
+      }
+      @media all and (min-width: 2560px) and (min-height: 800px){
+        bottom: -200vw * $px;
+      }
+
     }
     &-left{
       position: absolute;
@@ -670,6 +689,8 @@ main{
 }
 .banks{
   margin-top: 34px;
+  position: relative;
+  z-index: 2;
   &__container{
 
   }
@@ -704,8 +725,38 @@ main{
 }
 .pluses{
   padding-top: 114px;
+  position: relative;
+  z-index: 2;
   &__container{
     position: relative;
+  }
+  &__decoration{
+    &-ring{
+      position: absolute;
+      @media all and (max-width: 1200px){
+        display: none;
+      }
+      &.ring-1{
+        right: 0;
+        top: -3%;
+      }
+      &.ring-2{
+        left: 0;
+        top: 16%;
+      }
+      &.ring-3{
+        right: 0;
+        top: 35%;
+      }
+      &.ring-4{
+        left: 0;
+        top: 55%;
+      }
+      &.ring-5{
+        right: 0;
+        top: 70%;
+      }
+    }
   }
   &__decoration-1{
     position: absolute;
@@ -730,7 +781,7 @@ main{
       .pluses__chat-item{
         overflow: hidden;
         img, .subject{
-          transform: translateY(200px);
+          transform: translateY(300px);
         }
       }
       &.show{
@@ -1050,6 +1101,9 @@ main{
               top: 0;
               width: 10px;
               height: 15px;
+              @media all and (max-width: 500px){
+                display: none;
+              }
             }
             &:after{
               content: "";
@@ -1058,6 +1112,9 @@ main{
               width: 30px;
               height: 30px;
               border-radius: 50%;
+              @media all and (max-width: 500px){
+                display: none;
+              }
             }
           }
         }
@@ -1083,6 +1140,9 @@ main{
               top: 0;
               width: 10px;
               height: 10px;
+              @media all and (max-width: 500px){
+                display: none;
+              }
             }
             &:after{
               content: "";
@@ -1091,6 +1151,9 @@ main{
               width: 30px;
               height: 30px;
               border-radius: 50%;
+              @media all and (max-width: 500px){
+                display: none;
+              }
             }
           }
         }
@@ -1266,13 +1329,15 @@ main{
   background-size: cover;
   background-position: center;
   position: relative;
-  background-image: url('../../images/templates/table/bg.png');
+  @media all and (min-width: 501px){
+    background-image: url('../../images/templates/table/bg.jpg');
+  }
   @media all and (max-width: 1024px){
     padding-top: 160px;
     padding-bottom: 160px;
   }
   @media all and (max-width: 500px){
-    background-image: url('../../images/templates/table/bg-mob.png');
+    background-image: url('../../images/templates/table/bg-mob.jpg');
   }
   &__bot{
     &-full{
